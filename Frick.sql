@@ -1,7 +1,7 @@
 -- create a table
 drop table if exists employees;
 create table employees(
-	employee_id INT,
+	employee_id INT Primary Key, -- primary key means this column must be unique
     first_name varchar(50), -- var char is like a string that can be up to x charicters
     last_name varchar(50),
     hourly_pay decimal(5,2), -- the first number (5) is the maximum number of didgets stored
@@ -9,7 +9,7 @@ create table employees(
 	hire_date date
 );
 
-insert into employees values (0, "jackson", "brink", 999.99, "2025-01-01");
+insert into employees values (0, "Jason", "Klins", 9.99, "2025-01-01");
 
 -- renaming table
 rename table employees to workers;
